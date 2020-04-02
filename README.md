@@ -59,28 +59,37 @@ Here we present some analysis results from the dataset to get the overview.
 
 - From the bar chart of sighting site, the majority of the sighting places occur in USA. 
 - Thus, for the rest we only focus on USA.
+![](/figures/country_count.png)
 
 
 - As the time goes by, we observe the increasing trend of UFOs finding, especially after 2000, it grows almost exponentially.
 - In 2012 and 2013, both sighting and posting counts reach the peak, about 7000 cases happened at that time.
+![](/figures/year_count.png)
+![](/figures/year_post_count.png)
 
 
-- California (CA) is the state where people spot UFOs the most. The number is 2 times more than the one in Washington (WA).
+- California (CA) is the state where people spot UFOs the most. The number is 2 times more than Washington (WA).
+![](/figures/state_count.png)
 
 
 - Besides the chart, here is the map showing the sighting rate of all states in US.
+![](/figures/map.png)
 
 
 - Most durations that UFOs being found are within 15 seconds or less.
 - Somehow suprising, roughly 50 times people see UFOs in more than 240 seconds a time.
+![](/figures/duration_count.png)
 
 
 - Most UFOs being witnessed are in the light shape followed by the triangle shape.
 - The number of the light shape is 2 times more than the triangle shape.
+![](/figures/shape_count.png)
 
 
-- People mostly spot the UFOs of the light shape, corresponding to the previous histogram that light-shaped UFOs are being found the most.
+- People mostly find the UFOs as flying and light-shaped objects, corresponding to the previous histogram that light-shaped UFOs are being found the most.
 - People describe the UFOs' colors are possibly bright, white, or red.
+![](/figures/comment_cloud.png)
+
 
 ### Related work
 Some Kaggle users have already worked on basic analyses on the data and simple statistical results such as time and geological distribution of the sighting cases are now open in Kaggle in IPython Notebook format. There former works visualize their results only in statistic ways. For example, they illustrate simple bar charts to list the number of reports grouped by nation, states, seasons, etc.. Thus, the viewers can only enjoy the given sketch and they cannot change granularity of the information on their own. Our project forwards the former works and implements interactive visualization. More specifically, we provide interactive map to depict UFOs sighting cases on and users can choose time ranges to be shown. Detailed information about each case are obtained by click on it on the map. In addition, the project prepares a tutorial about the usage of the interactive map.
