@@ -103,8 +103,13 @@ We take visual inspiration from the interactive refugee map created by [The Refu
 
 **10% of the final grade**
 
+### Two A4 pages describing the project goal
 
+We uploaded it to this repositoty. You can also access it using this [link](https://github.com/com-480-data-visualization/com-480-project-een1/blob/master/milestone_2.pdf).
 
+### Functional project prototype review
+
+You can access our prototype website using this [link](https://com-480-data-visualization.github.io/com-480-project-een1/).
 
 ## Milestone 3 (Thursday 28th May, 5pm)
 
