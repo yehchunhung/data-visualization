@@ -1,0 +1,96 @@
+/*
+This CSS governs the appearance of our site.
+You can find the basic concepts of CSS here: https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works
+*/
+
+:root {
+  --theme-color: rgb(62, 64, 88);
+}
+
+/*
+This makes the border and padding be counted as part of the element's size.
+https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model
+It switches from
+	https://mdn.mozillademos.org/files/13647/box-model-standard-small.png
+to
+	https://mdn.mozillademos.org/files/13649/box-model-alt-small.png
+*/
+* {
+  box-sizing: border-box;
+}
+
+/* Top navigation bar */
+/* nav {
+  width: 100%;
+
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+} */
+
+/* Make the links in the navbar bold */
+nav a {
+  font-weight: bold;
+}
+
+.map {
+  fill: none;
+  stroke: #000;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.point {
+  fill: #000;
+  stroke: none;
+  opacity: 0.25;
+}
+
+.brush .handle {
+  fill: gray;
+}
+
+.bar {
+  fill: steelblue;
+}
+
+.bar:hover {
+  fill: yellowgreen;
+}
+
+.axis--x path {
+  display: none;
+}
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+svg {
+  width: 84%;
+  height: auto;
+}
