@@ -1,0 +1,401 @@
+body {
+  height: 100vh;
+  width: 100%;
+  min-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background: #63b5f3; }
+
+.map,
+.detailed-instructions,
+.cool-facts,
+.about-us {
+  display: none;
+  border-radius: 10px;
+  height: 474px;
+  background: #192b3f;
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+  font-family: "VT323";
+  color: white;
+  font-size: 18px;
+  letter-spacing: 2px; }
+
+.about-us {
+  text-align: center;
+  flex-direction: column;
+  overflow: auto;
+  padding: 0 36px;
+  background: #192b3f; }
+  .about-us a {
+    color: white; }
+
+.introjs-tooltip {
+  font-family: "VT323";
+  font-size: 20px; }
+  .introjs-tooltip a {
+    font-family: "VT323";
+    font-size: 16px; }
+
+.introjs-helperNumberLayer {
+  background: #1774c6 !important; }
+
+.ufodex {
+  width: 1200px;
+  height: 700px;
+  margin: auto;
+  position: relative; }
+  .ufodex-left {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 70%;
+    position: absolute;
+    border-radius: 40px 15px 15px 40px;
+    border-left: 20px solid #0f4c81;
+    background: #1774c6;
+    border-bottom: 12px solid #0f4c81;
+    z-index: 1; }
+  .ufodex-lights-container {
+    height: 100px;
+    width: 100%;
+    display: flex; }
+  .ufodex-lights-lg {
+    background: #a8f2fb;
+    /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, #a8f2fb 0%, #0df1fc 50%, #0ebcd4 100%);
+    /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, #a8f2fb 0%, #0df1fc 50%, #0ebcd4 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, #a8f2fb 0%, #0df1fc 50%, #0ebcd4 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    border-radius: 50%;
+    border-top: 5px solid white;
+    border-right: 5px solid white;
+    border-bottom: 10px solid white;
+    border-left: 10px solid white;
+    height: 60px;
+    width: 60px;
+    margin: 10px 0 10px 10px; }
+    .ufodex-lights-lg-ufo {
+      position: absolute;
+      width: 24px;
+      top: 32px;
+      left: 37px;
+      filter: invert(100%);
+      display: none; }
+  .ufodex-lights-sm-container {
+    display: flex;
+    padding-top: 5px; }
+  .ufodex-lights-sm-light {
+    background: white;
+    border-radius: 50%;
+    margin: 7px;
+    height: 25px;
+    width: 25px; }
+    .ufodex-lights-sm-light.one {
+      background: #ed3743;
+      /* Old browsers */
+      background: -moz-radial-gradient(center, ellipse cover, #ed3743 0%, #aa0515 100%);
+      /* FF3.6-15 */
+      background: -webkit-radial-gradient(center, ellipse cover, #ed3743 0%, #aa0515 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: radial-gradient(ellipse at center, #ed3743 0%, #aa0515 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
+    .ufodex-lights-sm-light.two {
+      background: #dee25a;
+      /* Old browsers */
+      background: -moz-radial-gradient(center, ellipse cover, #dee25a 0%, #8e993b 100%);
+      /* FF3.6-15 */
+      background: -webkit-radial-gradient(center, ellipse cover, #dee25a 0%, #8e993b 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: radial-gradient(ellipse at center, #dee25a 0%, #8e993b 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
+    .ufodex-lights-sm-light.three {
+      background: #a9f74c;
+      /* Old browsers */
+      background: -moz-radial-gradient(center, ellipse cover, #a9f74c 0%, #66a638 100%);
+      /* FF3.6-15 */
+      background: -webkit-radial-gradient(center, ellipse cover, #a9f74c 0%, #66a638 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: radial-gradient(ellipse at center, #a9f74c 0%, #66a638 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
+  .ufodex-screen {
+    position: relative;
+    background: #e3e3e3;
+    border-radius: 20px;
+    border-left: 7px solid #83838f;
+    border-bottom: 7px solid #83838f;
+    width: 780px;
+    height: 570px;
+    margin: 2px auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .ufodex-screen:before {
+      content: " ";
+      left: -20px;
+      top: 531px;
+      position: absolute;
+      width: 110px;
+      height: 8px;
+      transform: rotate(45deg);
+      background-color: #83838f; }
+    .ufodex-screen-cut {
+      position: absolute;
+      top: 599px;
+      right: 735px;
+      border-top: 80px solid transparent;
+      border-left: 80px solid #1774c6;
+      z-index: 1; }
+    .ufodex-screen-image-container {
+      background: #192b3f;
+      border-radius: 10px;
+      height: 474px;
+      width: 736px;
+      margin: 20px auto 0;
+      display: flex;
+      justify-content: center; }
+    .ufodex-screen-image {
+      border-radius: 10px;
+      height: 474px;
+      width: 736px; }
+    .ufodex-screen-bottom {
+      height: 80px;
+      width: 65%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+    .ufodex-screen-button {
+      height: 35px;
+      width: 35px;
+      background: #d30a40;
+      border-radius: 50%;
+      cursor: pointer; }
+    .ufodex-screen-vents {
+      width: 80px;
+      display: flex;
+      flex-direction: column; }
+    .ufodex-screen-vent {
+      width: 100%;
+      height: 3px;
+      border-radius: 10px;
+      background: black;
+      margin: 3px; }
+  .ufodex-right {
+    height: 90%;
+    width: 30%;
+    position: absolute;
+    left: 500px;
+    top: 50px;
+    border-radius: 0 0 40px 0;
+    background: #1467af;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: -1; }
+  .ufodex-logo-container {
+    display: inline-block;
+    margin: 20px;
+    border-radius: 5px;
+    display: inline-flex;
+    z-index: 1;
+    position: absolute;
+    top: 22px;
+    left: 40px;
+    width: 240px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .ufodex-logo-title {
+    color: white;
+    margin-right: -12px;
+    letter-spacing: 12px;
+    font-family: "VT323";
+    font-size: 56px; }
+  .ufodex-info-container {
+    width: 240px;
+    height: 100px;
+    position: absolute;
+    top: 130px;
+    border-radius: 7px;
+    background: #192b3f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "VT323";
+    font-size: 24px;
+    font-weight: normal;
+    color: white; }
+  .ufodex-buttons {
+    margin-top: 20px;
+    width: 240px;
+    height: 100px;
+    position: absolute;
+    top: 230px;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 1;
+    font-size: 18px;
+    color: #eee; }
+    .ufodex-buttons-shadow {
+      background: #307826;
+      width: 240px;
+      height: 100px;
+      border-radius: 10px;
+      position: absolute;
+      top: 257px;
+      left: 56px; }
+  .ufodex-button {
+    font-family: "VT323";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 50px;
+    margin: 1px;
+    box-sizing: border-box;
+    width: calc((240px / 2) - 2px);
+    background: #5aa428;
+    cursor: pointer; }
+    .ufodex-button.first {
+      border-radius: 10px 0 0 0; }
+    .ufodex-button.second {
+      border-radius: 0 10px 0 0; }
+    .ufodex-button.third {
+      border-radius: 0 0 0 10px; }
+    .ufodex-button.forth {
+      border-radius: 0 0 10px 0; }
+  .ufodex-longButtons {
+    height: 20px;
+    width: 240px;
+    position: absolute;
+    top: 365px;
+    left: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .ufodex-longButton {
+    height: 16px;
+    width: 56px;
+    background: #2c2c2c;
+    border-radius: 9px;
+    font-family: "VT323";
+    font-size: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .ufodex-dualButtons {
+    display: flex;
+    height: 50px;
+    width: 120px;
+    position: absolute;
+    top: 400px;
+    left: 59px; }
+    .ufodex-dualButtons-shadow {
+      background: #83838f;
+      width: 120px;
+      height: 50px;
+      border-radius: 10px;
+      position: absolute;
+      top: 406px;
+      left: 56px; }
+  .ufodex-dualButton {
+    background: #e3e3e3;
+    width: 50%;
+    height: 100%;
+    margin: 1px;
+    cursor: pointer; }
+    .ufodex-dualButton.first {
+      border-radius: 10px 0 0 10px; }
+    .ufodex-dualButton.second {
+      border-radius: 0 10px 10px 0; }
+  .ufodex-goldButton {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 425px;
+    left: 237px;
+    cursor: pointer;
+    background: #f4dbb2;
+    /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, #f4dbb2 1%, gold 100%);
+    /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, #f4dbb2 1%, gold 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, #f4dbb2 1%, gold 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
+  .ufodex-blackButtons {
+    width: 240px;
+    height: 60px;
+    position: absolute;
+    top: 510px;
+    display: flex;
+    justify-content: space-between; }
+  .ufodex-blackButton {
+    width: 50%;
+    border-radius: 10px;
+    height: 100%;
+    margin: 0 10px;
+    background: #2c2c2c;
+    cursor: pointer; }
+  .ufodex-credit-container {
+    position: absolute;
+    top: 586px;
+    left: 60px;
+    width: 240px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .ufodex-credit {
+    color: white;
+    font-family: "VT323";
+    font-size: 14px; }
+
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */ }
+
+.blink {
+  animation: blink 0.5s linear infinite; }
+
+@keyframes blink {
+  0% {
+    -webkit-box-shadow: 0px 0px 17px 7px white;
+    -moz-box-shadow: 0px 0px 17px 7px white;
+    box-shadow: 0px 0px 17px 7px white; }
+  100% {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none; } }
+
+.circle {
+  animation: circle 0.5s linear infinite; }
+
+@keyframes circle {
+  0% {
+    transform: rotate(0deg) translate(-2px) rotate(0deg); }
+  100% {
+    transform: rotate(360deg) translate(-2px) rotate(-360deg); } }
