@@ -105,7 +105,7 @@ We take visual inspiration from the interactive refugee map created by [The Refu
 
 ### Two A4 pages describing the project goal
 
-We uploaded it to this repositoty. You can also access it using this [link](https://github.com/com-480-data-visualization/com-480-project-een1/blob/master/milestone_2.pdf).
+We uploaded it to this repository. You can also access it using this [link](https://github.com/com-480-data-visualization/com-480-project-een1/blob/master/milestone_2.pdf).
 
 ### Functional project prototype review
 
