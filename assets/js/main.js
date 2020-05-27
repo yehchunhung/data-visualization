@@ -91,13 +91,13 @@ whenDocumentLoaded(() => {
         intro: 'This is the main screen that will show all the information.'
       },
       {
+        element: '.ufodex-buttons',
+        intro: 'Click here to check out different modes.'
+      },
+      {
         element: '.ufodex-goldButton',
         intro: 'Click here to show the tutorial for the current mode (It will be enabled after this tutorial).',
         position: 'left'
-      },
-      {
-        element: '.ufodex-buttons',
-        intro: 'Click here to check out different modes.'
       },
       {
         intro: 'You\'re all set! <br /> Let\'s spot an UFO!'
