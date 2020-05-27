@@ -337,7 +337,7 @@ whenDocumentLoaded(() => {
       enable_next(original_onclick);
     }
 
-    if (intro._currentStep == 3) {
+    if (intro._currentStep == 4) {
       disable_gold();
     } else {
       enable_gold();
