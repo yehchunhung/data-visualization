@@ -73,7 +73,7 @@ Our focus will be where and when you will most likely to see a UFO. The structur
 
 
 ### Exploratory Data Analysis
-Here we present some analysis results from the dataset. For more details, you can check our [Jupyter notebook](Exploratory%20Data%20Analysis.ipynb). 
+Here we present some analysis results from the dataset. For more details, you can check our [Jupyter notebook](milestone_1/Exploratory%20Data%20Analysis.ipynb). 
 
 - From the bar chart of sighting site, the majority of the sighting places occur in USA. 
 - Thus, for the rest we only focus on USA.
