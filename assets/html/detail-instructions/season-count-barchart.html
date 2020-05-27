@@ -19,7 +19,7 @@
         .axis--x path {
             display: none;
         }
-        
+
         .d3-tip {
             line-height: 1;
             font-weight: bold;
@@ -73,7 +73,7 @@
                     .html(function(d) {
                         return "<strong>Count:</strong> <span style='color:red'>" + d.count + "</span>";
                     });
-        
+
         svg.call(tip);
 
         var barColor = d3.scaleLinear()
@@ -84,7 +84,7 @@
             .then((data) => {
                 return data.map((d) => {
                     d.count = +d.count;
-                    return d;  
+                    return d;
                     })
                 })
                 .then((data) => {
@@ -134,7 +134,7 @@
                     .style("fill", function(d){ return barColor(d.count)})
                     .attr("y", function(d) { return y(d.count); })
                     .attr("height", function(d) { return height - y(d.count); })
-                    .delay(function(d,i){console.log(i) ; return(i*100)});
+                    .delay(function(d,i){ return(i*100) });
             }).catch((error) => {
                     throw error;
             });
