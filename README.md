@@ -1,4 +1,4 @@
-# Project of Data Visualization (COM-480)
+# UFOdex: A device that helps you spot UFOs
 
 | Student's name | SCIPER |
 | -------------- | ------ |
@@ -11,6 +11,42 @@
 ## Milestone 3 (Thursday 28th May, 5pm)
 
 **80% of the final grade**
+
+### Setup
+
+#### Get the source code
+
+```bash
+git clone https://github.com/com-480-data-visualization/com-480-project-een1.git
+cd com-480-project-een1
+```
+
+#### Install packages
+
+```bash
+npm install
+# or
+yarn install
+```
+
+### Usage
+
+#### Start the server (the website will automatically open on your browser)
+
+```bash
+npm start
+# or
+yarn start
+```
+
+### Screencast
+
+You can find our screencast by clicking on the below image.
+[![Screencast](https://img.youtube.com/vi/nmjpIAe8x_M/0.jpg)](https://www.youtube.com/watch?v=nmjpIAe8x_M)
+
+### Process Book
+
+You can find our process book by clicking on this [link](https://github.com/com-480-data-visualization/com-480-project-een1/)
 
 
 ## Milestone 2 (Friday 1st May, 5pm)
