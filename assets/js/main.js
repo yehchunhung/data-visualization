@@ -249,7 +249,7 @@ whenDocumentLoaded(() => {
     intro.start();
   }
 
-  function cool_facts_tutorial() {
+  function fun_facts_tutorial() {
     const intro = introJs();
     intro.setOptions({
       hidePrev: true,
@@ -261,43 +261,43 @@ whenDocumentLoaded(() => {
       exitOnOverlayClick: false,
       steps: [
         {
-          element: '.cool-facts',
-          intro: 'Welcome to the tutorial in <b>cool facts</b>! UFOdex is going to present you some fun facts about UFOs.',
+          element: '.fun-facts',
+          intro: 'Welcome to the tutorial in <b>fun facts</b>! UFOdex is going to present you some fun facts about UFOs.',
           position: 'right'
         },
         {
-          element: '.cool-facts',
+          element: '.fun-facts',
           intro: 'As usual, you can click the buttons to check different visualizations.',
           position: 'top'
         },
         {
-          element: '.cool-facts',
+          element: '.fun-facts',
           intro: 'If you are ready, let\'s get started!',
           position: 'top'
         },
         {
-          element: '.cool-facts',
+          element: '.fun-facts',
           intro: 'Do you know how UFOs look like? To answer, press the first button.',
           position: 'top'
         },
         {
-          element: '.cool-facts',
-          intro: 'COOL FACT 1: Regarding the appearance, most eyewitnesses describe UFOs as <b><mark class="yellow">light</mark></b> (press the icon to check the number). As for their shape, most witnesses think they are <b><mark class="yellow">triangle-shaped</mark></b>. Out of surprise, even some people think of them as <b><mark class="yellow">cigars</mark></b>.',
+          element: '.fun-facts',
+          intro: 'FUN FACT 1: Regarding the appearance, most eyewitnesses describe UFOs as <b><mark class="yellow">light</mark></b> (press the icon to check the number). As for their shape, most witnesses think they are <b><mark class="yellow">triangle-shaped</mark></b>. Out of surprise, even some people think of them as <b><mark class="yellow">cigars</mark></b>.',
           position: 'right'
         },
         {
-          element: '.cool-facts',
+          element: '.fun-facts',
           intro: 'Next, click the second button to see how onlookers describe them.',
           position: 'top'
         },
         {
-          element: '.cool-facts',
-          intro: 'COOL FACT 2: From the comments these lookers-on gave, UFOs are maybe <b><mark class="yellow">bright lights</mark></b> and <b><mark class="yellow">moving objects</mark></b> with some colors like <b><mark style="background-color:orange">orange</mark></b>, <b><mark style="background-color:white">white</mark></b>, or <b><mark style="background-color:red">red</mark></b>.',
+          element: '.fun-facts',
+          intro: 'FUN FACT 2: From the comments these lookers-on gave, UFOs are maybe <b><mark class="yellow">bright lights</mark></b> and <b><mark class="yellow">moving objects</mark></b> with some colors like <b><mark style="background-color:orange">orange</mark></b>, <b><mark style="background-color:white">white</mark></b>, or <b><mark style="background-color:red">red</mark></b>.',
           position: 'right'
         },
         {
-          element: '.cool-facts',
-          intro: 'Done! In this section, you\'ve learned the cool facts about UFOs. Hope you grasp some fun knowledge! :)',
+          element: '.fun-facts',
+          intro: 'Done! In this section, you\'ve learned the fun facts about UFOs. Hope you grasp some fun knowledge! :)',
           position: 'right'
         }
       ]
@@ -387,8 +387,8 @@ whenDocumentLoaded(() => {
     // Prevent button spamming
     if ($(opened_mode).is(':animated')) { return false; }
 
-    showMode(opened_mode, '.cool-facts');
-    opened_mode = '.cool-facts';
+    showMode(opened_mode, '.fun-facts');
+    opened_mode = '.fun-facts';
   });
   $('.ufodex-button.forth').click(() => {
     // Prevent button spamming
@@ -409,8 +409,8 @@ whenDocumentLoaded(() => {
       case '.detailed-instructions':
         detailed_instructions_tutorial();
         break;
-      case '.cool-facts':
-        cool_facts_tutorial();
+      case '.fun-facts':
+        fun_facts_tutorial();
         break;
       case '.about-us':
         about_us_tutorial();
