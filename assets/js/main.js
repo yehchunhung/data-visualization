@@ -80,7 +80,7 @@ whenDocumentLoaded(() => {
     exitOnOverlayClick: false,
     steps: [
       {
-        intro: 'Welcome to UFOdex! <br /> A device that helps you spot an UFO.'
+        intro: 'Welcome to UFOdex! <br /> A device that helps you spot UFOs.'
       },
       {
         element: '.ufodex-screen-button',
