@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet">
+    <style>
+        g, text{
+            font-family: "VT323";
+            color: white;
+        }
+
+        .bar {
+            fill: steelblue;
+        }
+
+        .label {
+            fill: white;
+        }
+
+        .axis--x path {
+            display: none;
+        }
+
+        .d3-tip {
+            line-height: 1;
+            font-family: "VT323";
+            font-weight: bold;
+            padding: 8px;
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            border-radius: 2px;
+        }
+
+        /* Creates a small triangle extender for the tooltip */
+        .d3-tip:after {
+            box-sizing: border-box;
+            display: inline;
+            font-size: 10px;
+            width: 100%;
+            line-height: 1;
+            color: rgba(0, 0, 0, 0.8);
+            content: "\25BC";
+            position: absolute;
+            text-align: center;
+        }
+
+        /* Style northward tooltips differently */
+        .d3-tip.n:after {
+            margin: -1px 0 0 0;
+            top: 100%;
+            left: 0;
+        }
+
+    </style>
+    <svg width="545" height="450"></svg>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+    <script>
+
+        var svg = d3.select("svg"),
+            margin = {top: 40, right: 10, bottom: 35, left: 60},
+            width = +svg.attr("width") - margin.left - margin.right,
+            height = +svg.attr("height") - margin.top - margin.bottom;
+
+        var x = d3.scaleBand().rangeRound([0, width]).padding(0.1),
+            y = d3.scaleLinear().rangeRound([height, 10]);
+
+        var g = svg.append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        var tip = d3.tip()
+                    .attr('class', 'd3-tip')
+                    .offset([-10, 0])
+                    .html(function(d) {
+                        return "<strong>Count:</strong> <span style='color:red'>" + d.count + "</span>";
+                    });
+
+        var barColor = d3.scaleLinear()
+                        .domain([1000, 5000])
+                        .range(["#208000", "#FFDE00"]);
+
+        svg.call(tip);
+
+        d3.csv("ufo-sightings/sight-day-count.csv")
+            .then((data) => {
+                return data.map((d) => {
+                    d.count = +d.count;
+                    return d;
+                    })
+                })
+                .then((data) => {
+                    x.domain(data.map(function(d) {return d.day;}));
+                    y.domain([0, d3.max(data, function(d) {return d.count;})]);
+
+
+                    g.append("g")
+                        .attr("class", "axis axis--x")
+                        .attr("transform", "translate(0," + height + ")")
+                        .style("font-size", "12")
+                        .call(d3.axisBottom(x));
+
+                    svg.append('text')
+                        .attr('class', 'label')
+                        .attr("text-anchor", "end")
+                        .attr("x", (width/2)+60)
+                        .attr("y", height+73)
+                        .text('Day');
+
+                    g.append("g")
+                        .attr("class", "axis axis--y")
+                        .call(d3.axisLeft(y))
+                    .append("text")
+                        .attr("transform", "rotate(-90)")
+                        .attr("y", 6)
+                        .attr("dy", "0.71em")
+                        .attr("text-anchor", "end")
+                        .text("Frequency");
+
+                    // text label for the y axis
+                    svg.append("text")
+                        .attr('class', 'label')
+                        .attr("transform", "rotate(-90)")
+                        .attr("y", 0 - margin.right/2+8)
+                        .attr("x", 0 - (height / 2))
+                        .attr("dy", "1em")
+                        .style("text-anchor", "middle")
+                        .text("Count");
+
+                    g.selectAll(".bar")
+                        .data(data)
+                        .enter().append("rect")
+                        .attr("class", "bar")
+                        .attr("x", function(d) { return x(d.day); })
+                        .attr("y", function(d) { return y(0); })
+                        .attr("width", x.bandwidth())
+                        .attr("height", function(d) { return height - y(0); })
+                        .on('mouseover', tip.show)
+                        .on('mouseout', tip.hide);
+
+                    svg.selectAll("rect")
+                        .transition()
+                        .duration(150)
+                        .style("fill", function(d){ return barColor(d.count)})
+                        .attr("y", function(d) { return y(d.count); })
+                        .attr("height", function(d) { return height - y(d.count); })
+                        .delay(function(d,i){return(i*100)});
+            }).catch((error) => {
+                    throw error;
+            });
+
+    </script>

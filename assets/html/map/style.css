@@ -1,0 +1,111 @@
+/* remove default margin and padding from body */
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/* set map, body, and html to 100% of the screen size */
+#map,
+body,
+html {
+  height: 100%;
+}
+
+.legend {
+  line-height: 18px;
+  color: #555;
+  fill-opacity: 0.7;
+}
+.legend i {
+  width: 18px;
+  height: 18px;
+  float: left;
+  margin-right: 8px;
+  opacity: 0.7;
+}
+.markerClusterSmall {
+  border-radius: 20px;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(245, 33, 121, 0.6);
+  font-size: 14px;
+  color: #c7c7c7b9;
+  text-align: center;
+  line-height: -1px;
+  font-weight: 300;
+  font-family: "VT323";
+  text-transform: uppercase;
+}
+.markerClusterMedium {
+  border-radius: 30px;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(245, 33, 121, 0.6);
+  font-size: 14px;
+  color: #c7c7c7b9;
+  text-align: center;
+  line-height: 27px;
+  font-weight: 300;
+  font-family: "VT323";
+  text-transform: uppercase;
+}
+.markerClusterLarge {
+  border-radius: 40px;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(245, 33, 121, 0.6);
+  font-size: 14px;
+  color: #c7c7c7b9;
+  text-align: center;
+  line-height: 40px;
+  font-weight: 300;
+  font-family: "VT323";
+  text-transform: uppercase;
+}
+.markerClusterLargeXL {
+  border-radius: 60px;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(245, 33, 121, 0.6);
+  font-size: 14px;
+  color: #c7c7c7b9;
+  text-align: center;
+  line-height: 55px;
+  font-weight: 300;
+  font-family: "VT323";
+  text-transform: uppercase;
+}
+.markerClusterLabel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.target{
+font-size: 1.4em;
+font-weight: bold;
+} 
+.info {
+  padding: 6px 8px;
+  font-size: 16px;
+  font-family: "VT323";
+  background: white;
+  background: rgba(255,255,255,0.8);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
+.info h4 {
+  margin: 0 0 5px;
+  color: #777;
+}
+.message .leaflet-popup-tip{
+  background: rgba(255,255,255,0.8);
+  box-shadow: 0 0 15px rgba(0,0,0,0);
+}
+.message .leaflet-popup-content-wrapper{
+  font-size: 16px;
+  font-family: "VT323";
+  color: black;
+  background: rgba(255,255,255,0.8);
+  box-shadow: 0 0 15px rgba(0,0,0);
+  border-radius: 5px;
+}

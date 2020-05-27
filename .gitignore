@@ -1,0 +1,4 @@
+assets/sass/
+node_modules/
+
+yarn.lock

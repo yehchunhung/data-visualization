@@ -1,0 +1,126 @@
+{
+    "name": "UFO",
+    "img": "./ufo-sightings/figures/ufo.png",
+    "count": "65114",
+    "area": "80",
+    "children": [
+     {
+      "name": "Appearance",
+      "count": "29121",
+      "area": "10",
+      "children": [
+       {
+            "shape": "light",
+            "name": "Appearance",
+            "count": "13473", 
+            "area": "100",
+            "img":  "./ufo-sightings/figures/light.png",
+            "size": 10000
+       },
+       {
+            "shape": "fireball",
+            "name": "Appearance",
+            "count": "5148", 
+            "area": "65",
+            "img":  "./ufo-sightings/figures/fireball.png",
+            "size": 10000
+       },
+       {
+            "shape": "disk",
+            "name": "Appearance",
+            "count": "4121", 
+            "area": "30",
+            "img":  "./ufo-sightings/figures/disk.png",
+            "size": 10000
+       },
+       {
+            "shape": "formation",
+            "name": "Appearance",
+            "count": "1990", 
+            "area": "35",
+            "img":  "./ufo-sightings/figures/formation.png",
+            "size": 10000
+       },
+       {
+            "shape": "changing",
+            "name": "Appearance",
+            "count": "1584", 
+            "area": "20",
+            "img":  "./ufo-sightings/figures/changing.png",
+            "size": 10000
+       },
+       {
+            "shape": "flash",
+            "name": "Appearance",
+            "count": "1062", 
+            "area": "30",
+            "img":  "./ufo-sightings/figures/flash.png",
+            "size": 10000
+       }
+     ]
+     },
+     {
+      "name": "Shape",
+      "count": "25394",
+      "area": "10",
+      "children": [
+        {
+            "shape": "triangle",
+            "name": "Shape",
+            "count": "6549", 
+            "area": "60",
+            "img":  "./ufo-sightings/figures/triangle.png",
+            "size": 10000
+        },
+        {
+            "shape": "circle",
+            "name": "Shape",
+            "count": "6118", 
+            "area": "50",
+            "img":  "./ufo-sightings/figures/circle.png",
+            "size": 10000
+        },
+        {
+            "shape": "sphere",
+            "name": "Shape",
+            "count": "4347", 
+            "area": "45",
+            "img":  "./ufo-sightings/figures/sphere.png",
+            "size": 10000
+        },
+        {
+            "shape": "oval",
+            "name": "Shape",
+            "count": "3032", 
+            "area": "40",
+            "img":  "./ufo-sightings/figures/oval.png",
+            "size": 10000
+        },
+        {
+            "shape": "cigar",
+            "name": "Shape",
+            "count": "1643", 
+            "area": "30",
+            "img":  "./ufo-sightings/figures/cigar.png",
+            "size": 10000
+        },
+        {
+            "shape": "rectangle",
+            "name": "Shape",
+            "count": "1070", 
+            "area": "28",
+            "img":  "./ufo-sightings/figures/rectangle.png",
+            "size": 10000
+        },
+        {
+            "shape": "cylinder",
+            "name": "Shape",
+            "count": "1027", 
+            "area": "28",
+            "img":  "./ufo-sightings/figures/cylinder.png",
+            "size": 10000
+        }
+      ]
+     }
+    ]
+   }

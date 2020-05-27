@@ -4,7 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Kuan Tung, Chun-Hung Yeh, Hiroki Hayakawa">
+
   <title>UFOdex</title>
+  <meta name="description" content="A device that helps you spot an UFO!">
 
   <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
@@ -15,13 +18,13 @@
   <meta name="theme-color" content="#ffffff">
 
   <!-- intro.js -->
-  <script src="dist/js/intro.min.js"></script>
-  <link rel="stylesheet" href="dist/css/introjs.min.css">
-  <!-- jQuery -->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.9.3/introjs.min.css">
 
-  <link href="https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet">
-  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=VT323&display=swap">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -47,31 +50,33 @@
           <div class="ufodex-screen-image">
             <div class="map">
               <!-- Place to add map plot -->
-              Map
+              <iframe class="responsive-iframe" name="map" src="assets/html/map/map.html" height="474" width="736" frameBorder="0"></iframe>
             </div>
             <div class="detailed-instructions">
               <!-- Place to add detailed instructions plots -->
-              Detailed instructions
+              <iframe src="assets/html/detail-instructions/detailed-instructions.html" height="474" width="736"
+                frameBorder="0" style="border-radius: 10px;"></iframe>
             </div>
             <div class="cool-facts">
               <!-- Place to add cool facts plots -->
-              Cool facts
+              <iframe src="assets/html/cool-facts/cool-facts.html" height="474" width="736" frameBorder="0"
+                style="border-radius: 10px;"></iframe>
             </div>
             <div class="about-us">
-              <h3 style="margin-top: 0px;">Our motivation</h3>
+              <h3 style="color: #ff1d3e; margin-top: 0px;"><b>Our motivation</b></h3>
               <p class="text-justify">Many people, including us, find the mysterious unidentified flying objects (UFOs)
                 interesting. You might read articles or watch videos about them. But few people (at least the people we
                 know) have actually spotted one of them. We believed one of the reason could be there arn't many guides
                 of finding UFOs. Therefore, we decided to make a tutorial based on the previous records of UFO
                 sightings.</p>
-              <h3>Links to our process book, repository, and Screencast</h3>
+              <h3 style="color: #facb07;">Links to our process book, repository, and Screencast</h3>
               <a href="https://github.com/com-480-data-visualization/com-480-project-een1" target="_blank">Process
                 book</a><br />
               <a href="https://github.com/com-480-data-visualization/com-480-project-een1"
                 target="_blank">Repository</a><br />
               <a href="https://github.com/com-480-data-visualization/com-480-project-een1"
                 target="_blank">Screencast</a>
-              <h3>Team member</h3>
+              <h3 style="color: #56ce85;">Team member</h3>
               <a href="https://github.com/yehchunhung" target="_blank">Chun-Hung Yeh</a><br />
               <a href="https://github.com/dinotuku" target="_blank">Kuan Tung</a><br />
               <a href="https://github.com/hirokihayakawa07" target="_blank">Hiroki Hayakawa</a>
@@ -131,6 +136,13 @@
     </div>
   </div>
 </body>
+<!-- intro.js -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.9.3/intro.min.js"></script>
+
+<!-- jQuery -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<!-- Main JS -->
 <script src="assets/js/main.js"></script>
 
 </html>

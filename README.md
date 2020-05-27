@@ -6,7 +6,25 @@
 | Kuan Tung | 307099 |
 | Hiroki Hayakawa | 308681 |
 
-[Milestone 1](#milestone-1-friday-3rd-april-5pm) • [Milestone 2](#milestone-2-friday-1st-may-5pm) • [Milestone 3](#milestone-3-thursday-28th-may-5pm)
+[Milestone 3](#milestone-3-thursday-28th-may-5pm) • [Milestone 2](#milestone-2-friday-1st-may-5pm) • [Milestone 1](#milestone-1-friday-3rd-april-5pm)
+
+## Milestone 3 (Thursday 28th May, 5pm)
+
+**80% of the final grade**
+
+
+## Milestone 2 (Friday 1st May, 5pm)
+
+**10% of the final grade**
+
+### Two A4 pages describing the project goal
+
+We uploaded it to this repository. You can also access it using this [link](https://github.com/com-480-data-visualization/com-480-project-een1/blob/master/milestone_2.pdf).
+
+### Functional project prototype review
+
+You can access our prototype website using this [link](https://com-480-data-visualization.github.io/com-480-project-een1/).
+
 
 ## Milestone 1 (Friday 3rd April, 5pm)
 
@@ -59,59 +77,39 @@ Here we present some analysis results from the dataset. For more details, you ca
 
 - From the bar chart of sighting site, the majority of the sighting places occur in USA. 
 - Thus, for the rest we only focus on USA.
-![](/figures/country_count.png)
+![](/milestone_1/country_count.png)
 
 
 - As the time goes by, we observe the increasing trend of UFOs finding, especially after 2000, it grows almost exponentially.
 - In 2012 and 2013, both sighting and posting counts reach the peak, about 7000 cases happened at that time.
-![](/figures/year_count.png)
-![](/figures/year_post_count.png)
+![](/milestone_1/year_count.png)
+![](/milestone_1/year_post_count.png)
 
 
 - California (CA) is the state where people spot UFOs the most. The number is 2 times more than Washington (WA).
-![](/figures/state_count.png)
+![](/milestone_1/state_count.png)
 
 
 - Besides the chart, here is the map showing the sighting rate of all states in US.
-![](/figures/map.png)
+![](/milestone_1/map.png)
 
 
 - Most durations that UFOs being found are within 15 seconds or less.
 - Somehow suprising, roughly 50 times people see UFOs in more than 240 seconds a time.
-![](/figures/duration_count.png)
+![](/milestone_1/duration_count.png)
 
 
 - Most UFOs being witnessed are in the light shape followed by the triangle shape.
 - The number of the light shape is 2 times more than the triangle shape.
-![](/figures/shape_count.png)
+![](/milestone_1/shape_count.png)
 
 
 - People mostly find the UFOs as flying and light-shaped objects, corresponding to the previous histogram that light-shaped UFOs are being found the most.
 - People describe the UFOs' colors are possibly bright, white, or red.
-![](/figures/comment_cloud.png)
+![](/milestone_1/comment_cloud.png)
 
 
 ### Related work
 Some Kaggle users have already worked on basic analyses on the data and simple statistical results such as time and geological distribution of the sighting cases are now open in Kaggle in IPython Notebook format. There former works visualize their results only in statistic ways. For example, they illustrate simple bar charts to list the number of reports grouped by nation, states, seasons, etc.. Thus, the viewers can only enjoy the given sketch and they cannot change granularity of the information on their own. Our project forwards the former works and implements interactive visualization. More specifically, we provide interactive map to depict UFOs sighting cases on and users can choose time ranges to be shown. Detailed information about each case are obtained by click on it on the map. In addition, the project prepares a tutorial about the usage of the interactive map.
 
 We take visual inspiration from the interactive refugee map created by [The Refugee Project](http://therefugeeproject.org/#/2018). In their world map, the number of refugees is depicted with a size of bubble and the refugees’ origin countries are correspond to the location of the bubble. Users can change the time range of the migration to be shown and move around on the map. Moreover, by clicking the bubble of refugees, detailed information about the refugees (e.g. the number of refugees and destinations) pop up in a new window. Global coal power map created by [Carbon Brief](https://www.carbonbrief.org/mapped-worlds-coal-power-plants) could be another example to our visualization. Their tutorial for the interactive power map is concise and easy to understand although is based on a static picture.
-
-
-
-
-## Milestone 2 (Friday 1st May, 5pm)
-
-**10% of the final grade**
-
-### Two A4 pages describing the project goal
-
-We uploaded it to this repository. You can also access it using this [link](https://github.com/com-480-data-visualization/com-480-project-een1/blob/master/milestone_2.pdf).
-
-### Functional project prototype review
-
-You can access our prototype website using this [link](https://com-480-data-visualization.github.io/com-480-project-een1/).
-
-## Milestone 3 (Thursday 28th May, 5pm)
-
-**80% of the final grade**
-

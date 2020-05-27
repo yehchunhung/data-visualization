@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" style="overflow: hidden;">
+<head>
+    <meta charset="utf-8">
+    <!-- Load bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet">
+    <title>Interactive Bar Charts</title>
+    <meta name="description" content="Detailed Instructions">
+    <meta name="author" content="Chun-Hung Yeh">
+    <style>
+        html,body {
+            height: 90%;
+            width: 50%;
+            margin:0;
+            background: #192b3f;
+        }
+        body {
+            display:flex;
+        }
+        form {
+            margin: 30px;
+        }
+        .btn {
+            font-family:"VT323";
+            height: 60px;
+            width: 71px;
+            padding: 0.2em;
+            margin: 0px 0px 6px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <form>
+        <button type="button" class="btn btn-outline-primary" onclick="stateCount()">State Count</button>
+        <button type="button" class="btn btn-outline-light" onclick="seasonCount()">Season Count</button>
+        <button type="button" class="btn btn-outline-warning" onclick="monthCount()">Month Count</button>
+        <button type="button" class="btn btn-outline-info" onclick="dayCount()">Day<br> Count</button>
+        <button type="button" class="btn btn-outline-danger" onclick="dateCount()">Date Count</button>
+        <button type="button" class="btn btn-outline-success" onclick="foundDuration()" style="height: 80px; width: 71px;">Found Duration Count</button>
+    </form>
+    <div id="iframeDisplay"></div>
+</body>
+<script>
+    function stateCount() {
+        document.getElementById("iframeDisplay").innerHTML = "<iframe src=\"state-count-map.html\" height=\"470\" width=\"657\" frameBorder=\"0\"></iframe>";
+    }
+
+    function monthCount() {
+        document.getElementById("iframeDisplay").innerHTML = "<iframe src=\"month-count-barchart.html\" height=\"470\" width=\"657\" frameBorder=\"0\"></iframe>";
+    }
+
+    function dayCount() {
+        document.getElementById("iframeDisplay").innerHTML = "<iframe src=\"day-count-barchart.html\" height=\"470\" width=\"657\" frameBorder=\"0\"></iframe>";
+    }
+
+    function seasonCount() {
+        document.getElementById("iframeDisplay").innerHTML = "<iframe src=\"season-count-barchart.html\" height=\"470\" width=\"657\" frameBorder=\"0\"></iframe>";
+    }
+
+    function dateCount() {
+        document.getElementById("iframeDisplay").innerHTML = "<iframe src=\"date-count-calendar.html\" height=\"470\" width=\"657\" frameBorder=\"0\"></iframe>";
+    }
+
+    function foundDuration() {
+        document.getElementById("iframeDisplay").innerHTML = "<iframe src=\"found-duration-barchart.html\" height=\"470\" width=\"657\" frameBorder=\"0\"></iframe>";
+    }
+</script>
+</html>

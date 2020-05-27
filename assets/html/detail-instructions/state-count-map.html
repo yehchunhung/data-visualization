@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet">
+<style>
+  body {
+    font-family: "VT323";
+    font-size: 16px;
+    padding: 40px;
+  }
+
+  h1 {
+    font-size: 3em;
+    font-weight: 700;
+    color: #0099FF;
+  }
+
+  a {
+    color: #333399;
+  }
+
+  a:hover {
+    color: #FF0099;
+  }
+
+  .states {
+    stroke: #fff;
+    stroke-width: 1px;
+  }
+
+  .states:hover {
+    opacity: .6;
+  }
+
+  .legendLinear,
+  text {
+    font-size: 14px;
+    fill: #fff;
+  }
+
+  .d3-tip {
+    line-height: 1;
+    padding: 12px;
+    background: rgba(43, 43, 43, 0.8);
+    color: #fff;
+    border-radius: 2px;
+  }
+</style>
+
+<body>
+  <div id="vis"></div>
+
+  <script src="//d3js.org/d3.v3.min.js"></script>
+  <script src="//d3js.org/queue.v1.min.js"></script>
+  <script src="d3-legend.min.js"></script>
+  <script src="//d3js.org/topojson.v1.min.js"></script>
+  <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+
+  <script>
+    var width = 550;
+    height = 350;
+
+    var tip = d3.tip()
+      .attr('class', 'd3-tip')
+      .offset([-5, 0])
+      .html(function (d) {
+        var dataRow = countryById.get(d.properties.name);
+        if (dataRow) {
+          return dataRow.states + ": " + dataRow.count;
+        } else {
+          return d.properties.name + ": No data.";
+        }
+      })
+
+
+    var svg = d3.select('#vis').append('svg')
+      .attr('width', width)
+      .attr('height', height);
+
+    svg.call(tip);
+
+    var projection = d3.geo.albersUsa()
+      .scale(600) // mess with this if you want
+      .translate([width / 2.3, height / 2.3]);
+
+    var path = d3.geo.path()
+      .projection(projection);
+
+    var colorScale = d3.scale.linear().range(["#208000", "#FFDE00"]).interpolate(d3.interpolateLab);
+
+    var countryById = d3.map();
+
+    // we use queue because we have 2 data files to load.
+    queue()
+      .defer(d3.json, "ufo-sightings/USA.json")
+      .defer(d3.csv, "ufo-sightings/state-count.csv", typeAndSet) // process
+      .await(loaded);
+
+    function typeAndSet(d) {
+      d.count = +d.count;
+      countryById.set(d.states, d);
+      return d;
+    }
+
+    function getColor(d) {
+      var dataRow = countryById.get(d.properties.name);
+      if (dataRow) {
+        return colorScale(dataRow.count);
+      } else {
+        return "#ccc";
+      }
+    }
+
+
+    function loaded(error, usa, count) {
+
+
+      colorScale.domain(d3.extent(count, function (d) { return d.count; }));
+
+      var states = topojson.feature(usa, usa.objects.units).features;
+
+      svg.selectAll('path.states')
+        .data(states)
+        .enter()
+        .append('path')
+        .attr('class', 'states')
+        .attr('d', path)
+        .on('mouseover', tip.show)
+        .on('mouseout', tip.hide)
+        .attr('fill', function (d, i) {
+          return getColor(d);
+        })
+        .append("title");
+
+      var linear = colorScale;
+
+      svg.append("g")
+        .attr("class", "legendLinear")
+        .attr("transform", "translate(300,300)");
+
+      var legendLinear = d3.legend.color()
+        .labelFormat(d3.format('.0f'))
+        .shapeWidth(30)
+        .orient('horizontal')
+        .scale(linear);
+
+      svg.select(".legendLinear")
+        .call(legendLinear);
+
+    }
+
+  </script>
+</body>
+
+</html>
