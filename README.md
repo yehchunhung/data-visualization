@@ -46,7 +46,7 @@ You can find our screencast by clicking on the below image.
 
 ### Process Book
 
-You can find our process book by clicking on this [link](https://github.com/com-480-data-visualization/com-480-project-een1/)
+You can find our process book by clicking on this [link](https://github.com/com-480-data-visualization/com-480-project-een1/blob/master/28052020_UFOdex_Process_Book_rev.0.pdf)
 
 
 ## Milestone 2 (Friday 1st May, 5pm)
